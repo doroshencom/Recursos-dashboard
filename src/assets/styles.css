@@ -1,144 +1,91 @@
-/* Fondo difuminado */
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  background: url('https://www.dsicom.es/assets/images/gradiente.png') no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  color: #e0e0e0;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 3rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.hero h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 2.5rem;
-  color: #9cee69;
-}
-
-.hero p {
-  font-size: 1rem;
-  color: #b0b0b0;
-  margin-bottom: 1rem;
-}
-
-/* Filtros estilo etiquetas */
-.filter-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 1.5rem 0;
-  flex-wrap: wrap;
-}
-
-.filter {
-  background: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  color: #e0e0e0;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, border-color 0.3s;
-}
-
-.filter.active {
-  background-color: #9cee69;
-  color: #121212;
-}
-
-.filter:hover {
-  background-color: rgba(156, 238, 105, 0.2);
-}
-
-.clear-filters {
-  background: none;
-  border: 1px solid #ff6b6b;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  color: #ff6b6b;
-  cursor: pointer;
-}
-
-/* Estilo de las tarjetas de recurso */
-.resource-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Outline solo para recursos */
-  display: flex;
-  flex-direction: column; /* Para que crezca solo hacia abajo */
-  align-items: flex-start;
-  justify-content: flex-start;
-  transition: background 0.3s ease;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  max-width: 100%; /* Mantener ancho fijo */
-}
-
-.resource-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.resource-card img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-}
-
-.resource-card h3 {
-  font-size: 0.95rem;
-  color: #e0e0e0;
-  margin: 0.5rem 0;
-}
-
-.resource-card .pildora {
-  background: none;
-  border: 1px solid #9cee69;
-  padding: 0.3rem 0.7rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  color: #9cee69;
-}
-
-/* Información adicional debajo del recurso */
-.extra-info {
-  background: rgba(255, 255, 255, 0.05);
-  margin-top: 1rem;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  display: none; /* Inicialmente oculto */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Border inferior */
-}
-
-.resource-card.open .extra-info {
-  display: block;
-}
-
-/* Ajustes de separación y grid */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  padding: 2rem 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Border alrededor del contenedor */
-  border-radius: 12px;
+  gap: 20px;
+  padding: 20px;
 }
 
-.category-box {
-  background: rgba(20, 20, 20, 0.8);
-  padding: 1.5rem;
+.category {
+  background-color: var(--box-background);
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
-.category-box:hover {
-  background: rgba(30, 30, 30, 0.9);
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resource-card {
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.resource-card:hover {
+  transform: scale(1.05);
+}
+
+.resource-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: var(--tag-background);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.tag i {
+  margin-right: 5px;
+}
+
+/* Modo expandido */
+.resource-card.expanded {
+  border: 2px solid var(--highlight-color);
+  background-color: var(--box-background-expanded);
+}
+
+.collapsed-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.full-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(--highlight-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
 }

@@ -1,30 +1,38 @@
 import React, { useState } from 'react';
 
-const ResourceCard = ({ resource }) => {
-  const [isOpen, setIsOpen] = useState(false);
+function ResourceCard({ resource }) {
+  const [expanded, setExpanded] = useState(false);
 
-  const toggleInfo = () => {
-    setIsOpen(!isOpen);
+  const handleExpand = () => {
+    setExpanded(!expanded);
   };
 
   return (
-    <div className={`resource-card ${isOpen ? 'open' : ''}`} onClick={toggleInfo}>
-      <img
-        src={resource.thumbnail || 'https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid'}
-        alt="Miniatura del recurso"
-      />
-      <h3>{resource.nombre}</h3>
-      <span className="pildora">{resource.categoria}</span>
-      {isOpen && (
-        <div className="extra-info">
-          <p>{resource.descripcionLarga}</p>
-          <a href={resource.enlace} target="_blank" rel="noopener noreferrer">
-            Ir al Recurso
-          </a>
+    <div className={`resource-card ${expanded ? 'expanded' : ''}`} onClick={handleExpand}>
+      {!expanded ? (
+        <div className="collapsed-content">
+          <img src={resource.imageThumbnail} alt={resource.title} className="thumbnail" />
+          <div className="resource-info">
+            <h3>{resource.title}</h3>
+            <div className="tags">
+              {resource.etiquetas.map((etiqueta, index) => (
+                <span key={index} className="tag">
+                  <i className="fas fa-tag"></i> {etiqueta}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="expanded-content">
+          <img src={resource.imageFull} alt={resource.title} className="full-image" />
+          <h3>{resource.title}</h3>
+          <p>{resource.description}</p>
+          <a href={resource.link} className="resource-link">Ir al Recurso</a>
         </div>
       )}
     </div>
   );
-};
+}
 
 export default ResourceCard;

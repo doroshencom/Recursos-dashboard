@@ -1,20 +1,25 @@
 import React from 'react';
 
-const FilterBar = ({ filters, toggleFilter, clearFilters }) => {
+function FilterBar({ filters, toggleFilter, clearFilters }) {
+  const allFilters = ['CSS', 'JavaScript', 'Figma', 'Diseño'];
+
   return (
-    <div className="filter-container">
-      {filters.map((filter, index) => (
-        <span
-          key={index}
-          className={`filter ${filter.isActive ? 'active' : ''}`}
-          onClick={() => toggleFilter(filter.name)}
-        >
-          {filter.name}
-        </span>
-      ))}
-      <button className="clear-filters" onClick={clearFilters}>Limpiar Filtros</button>
+    <div className="filter-bar">
+      <input type="text" placeholder="Css, Javascript, ..." className="filter-input" />
+      <div className="filter-buttons">
+        {allFilters.map((filter) => (
+          <button
+            key={filter}
+            className={`filter-button ${filters.includes(filter) ? 'active' : ''}`}
+            onClick={() => toggleFilter(filter)}
+          >
+            {filter}
+          </button>
+        ))}
+        <button className="filter-clear" onClick={clearFilters}>Clear</button>
+      </div>
     </div>
   );
-};
+}
 
 export default FilterBar;

@@ -1,0 +1,81 @@
+
+{
+  "formacion": [
+    {
+      "id": "recurso1",
+      "nombre": "Primeros Pasos en JavaScript",
+      "descripcionLarga": "https://es.javascript.info/first-steps",
+      "enlace": "https://es.javascript.info/first-steps",
+      "categoria": "JavaScript",
+      "etiquetas": ["JavaScript", "Fundamentos"]
+    },
+    {
+      "id": "recurso2",
+      "nombre": "Code Guide: HTML Doctype",
+      "descripcionLarga": "https://codeguide.co/#html-doctype",
+      "enlace": "https://codeguide.co/#html-doctype",
+      "categoria": "HTML",
+      "etiquetas": ["HTML", "Guía"]
+    },
+    {
+      "id": "recurso3",
+      "nombre": "Curso de HTML y CSS",
+      "descripcionLarga": "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-es.md#html--css",
+      "enlace": "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-es.md#html--css",
+      "categoria": "CSS",
+      "etiquetas": ["CSS", "HTML", "Libros"]
+    }
+  ],
+  "recursosCSS": [
+    {
+      "id": "recurso4",
+      "nombre": "28 Ebook y Curso Web Development",
+      "descripcionLarga": "https://dev.to/haycuoilennao19/28-ebook-and-course-free-for-web-development-89o",
+      "enlace": "https://dev.to/haycuoilennao19/28-ebook-and-course-free-for-web-development-89o",
+      "categoria": "CSS",
+      "etiquetas": ["CSS", "Libros"]
+    },
+    {
+      "id": "recurso5",
+      "nombre": "Awesome Design Tools",
+      "descripcionLarga": "https://github.com/goabstract/Awesome-Design-Tools#illustrations",
+      "enlace": "https://github.com/goabstract/Awesome-Design-Tools#illustrations",
+      "categoria": "Diseño",
+      "etiquetas": ["Diseño", "Herramientas"]
+    },
+    {
+      "id": "recurso6",
+      "nombre": "100+ Underline Animation",
+      "descripcionLarga": "https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40",
+      "enlace": "https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40",
+      "categoria": "CSS",
+      "etiquetas": ["CSS", "Animaciones"]
+    }
+  ],
+  "herramientas": [
+    {
+      "id": "recurso7",
+      "nombre": "JustCode Today Filters",
+      "descripcionLarga": "https://justcode.today/filters/",
+      "enlace": "https://justcode.today/filters/",
+      "categoria": "Herramientas",
+      "etiquetas": ["Filtros", "Herramientas"]
+    },
+    {
+      "id": "recurso8",
+      "nombre": "Shadows Generator",
+      "descripcionLarga": "https://shadows.brumm.af/",
+      "enlace": "https://shadows.brumm.af/",
+      "categoria": "CSS",
+      "etiquetas": ["CSS", "Sombra"]
+    },
+    {
+      "id": "recurso9",
+      "nombre": "Neumorphism.io",
+      "descripcionLarga": "https://neumorphism.io/#e0e0e0",
+      "enlace": "https://neumorphism.io/#e0e0e0",
+      "categoria": "CSS",
+      "etiquetas": ["CSS", "Neumorfismo"]
+    }
+  ]
+}

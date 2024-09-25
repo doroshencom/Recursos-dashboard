@@ -9,11 +9,24 @@ function App() {
   const [activeFilters, setActiveFilters] = useState([]);
 
   useEffect(() => {
-    fetch('/recursos.json')
-      .then((response) => response.json())
-      .then((data) => setRecursos(data))
-      .catch((error) => console.log('Error al cargar recursos: ', error));
+    fetch(`${process.env.PUBLIC_URL}/recursos.json`)
+      .then((response) => {
+        console.log(response);  // Agrega este log para ver qué estás recibiendo
+        if (!response.ok) {
+          throw new Error('Error al cargar los datos');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setRecursos(data);
+        setFilteredRecursos(data);
+      })
+      .catch((error) => {
+        console.error('Error al cargar recursos: ', error);
+      });
   }, []);
+  
+  
 
   const toggleFilter = (filter) => {
     const isActive = activeFilters.includes(filter);

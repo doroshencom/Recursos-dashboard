@@ -1,32 +1,135 @@
 {
-  "herramientas": [
-    {
-      "title": "Filtros",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "etiquetas": ["Filtros", "Herramientas"],
-      "imageThumbnail": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid",
-      "imageFull": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid",
-      "link": "#"
-    }
-  ],
   "formacion": [
     {
-      "title": "JavaScript, Fundamentos",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "titulo": "JavaScript: Primeros pasos",
+      "descripcion": "Una guía para aprender los primeros pasos con JavaScript.",
       "etiquetas": ["JavaScript", "Fundamentos"],
-      "imageThumbnail": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid",
-      "imageFull": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid",
-      "link": "#"
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://es.javascript.info/first-steps"
+    },
+    {
+      "titulo": "Code Guide: HTML Doctype",
+      "descripcion": "Guía de buenas prácticas en desarrollo web.",
+      "etiquetas": ["HTML", "Guía"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://codeguide.co/#html-doctype"
+    },
+    {
+      "titulo": "Libros HTML y CSS",
+      "descripcion": "Lista de libros gratuitos para aprender HTML y CSS.",
+      "etiquetas": ["CSS", "HTML", "Libros"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-es.md#html--css"
+    },
+    {
+      "titulo": "All the Tags",
+      "descripcion": "Una colección de etiquetas HTML para SEO y accesibilidad.",
+      "etiquetas": ["HTML", "SEO", "Accesibilidad"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://allthetags.com/"
+    },
+    {
+      "titulo": "CSS3 Cheatsheet",
+      "descripcion": "Un resumen práctico de las características de CSS3.",
+      "etiquetas": ["CSS", "Cheatsheet"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://www.emezeta.com//weblog/css3-cheatsheet/css3-cheatsheet-2017-emezeta.pdf"
+    },
+    {
+      "titulo": "HTML5 Cheatsheet",
+      "descripcion": "Resumen de HTML5 para desarrolladores.",
+      "etiquetas": ["HTML", "Cheatsheet"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://www.emezeta.com//weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf"
+    },
+    {
+      "titulo": "Include Media",
+      "descripcion": "Framework para manejar media queries en Sass.",
+      "etiquetas": ["CSS", "Sass", "Media Queries"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "imagenGrande": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://eduardoboucas.github.io/include-media/#features"
     }
   ],
   "recursosCSS": [
     {
-      "title": "CSS, Librería",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "etiquetas": ["CSS", "Librería"],
-      "imageThumbnail": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid",
-      "imageFull": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg?semt=ais_hybrid",
-      "link": "#"
+      "titulo": "28 Ebook y Curso Web Development",
+      "descripcion": "Una lista de ebooks y cursos gratuitos sobre desarrollo web.",
+      "etiquetas": ["CSS", "Libros"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://dev.to/haycuoilennao19/28-ebook-and-course-free-for-web-development-89o"
+    },
+    {
+      "titulo": "Awesome Design Tools",
+      "descripcion": "Una lista de herramientas de diseño para desarrolladores.",
+      "etiquetas": ["CSS", "Diseño", "Herramientas"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://github.com/goabstract/Awesome-Design-Tools#illustrations"
+    },
+    {
+      "titulo": "100+ Underline Animations",
+      "descripcion": "Colección de animaciones CSS para subrayados.",
+      "etiquetas": ["CSS", "Animaciones"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40"
+    },
+    {
+      "titulo": "Badass Shadows",
+      "descripcion": "Cómo crear sombras impresionantes en CSS.",
+      "etiquetas": ["CSS", "Sombra"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://blog.prototypr.io/how-to-make-badass-shadows-564b3a30aba4"
+    },
+    {
+      "titulo": "Hover Animations Codepen",
+      "descripcion": "Una colección de animaciones de hover en CodePen.",
+      "etiquetas": ["CSS", "Animaciones"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://codepen.io/torcode/pen/YXZJVQ"
+    }
+  ],
+  "herramientas": [
+    {
+      "titulo": "JustCode Today Filters",
+      "descripcion": "Una herramienta para aplicar filtros CSS.",
+      "etiquetas": ["Herramientas", "Filtros"],
+      "miniatura": "https://justcode.today/filters/brooke.jpg",
+      "enlace": "https://justcode.today/filters/"
+    },
+    {
+      "titulo": "Shadows Generator",
+      "descripcion": "Una herramienta para generar sombras CSS personalizadas.",
+      "etiquetas": ["CSS", "Sombra"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://shadows.brumm.af/"
+    },
+    {
+      "titulo": "Neumorphism Generator",
+      "descripcion": "Generador de efectos neumórficos en CSS.",
+      "etiquetas": ["CSS", "Neumorfismo"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://neumorphism.io/#e0e0e0"
+    },
+    {
+      "titulo": "Coolors",
+      "descripcion": "Una herramienta para generar paletas de colores.",
+      "etiquetas": ["Diseño", "Colores"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://coolors.co/d7dae5-b9cdda-a6d8d4-8eaf9d-6b7d7d"
+    },
+    {
+      "titulo": "Shape Divider",
+      "descripcion": "Una herramienta para generar separadores SVG.",
+      "etiquetas": ["SVG", "Diseño"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://www.shapedivider.app/"
+    },
+    {
+      "titulo": "Make Tints and Shades",
+      "descripcion": "Generador de tintes y sombras para colores.",
+      "etiquetas": ["Colores", "Diseño"],
+      "miniatura": "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg",
+      "enlace": "https://maketintsandshades.com/#007ee5"
     }
   ]
 }

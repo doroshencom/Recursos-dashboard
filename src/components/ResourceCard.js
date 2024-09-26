@@ -1,34 +1,33 @@
 import React, { useState } from 'react';
 
 function ResourceCard({ resource }) {
-  const [expanded, setExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleExpand = () => {
-    setExpanded(!expanded);
-  };
+  const toggleExpand = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className={`resource-card ${expanded ? 'expanded' : ''}`} onClick={handleExpand}>
-      {!expanded ? (
-        <div className="collapsed-content">
-          <img src={resource.imageThumbnail} alt={resource.title} className="thumbnail" />
-          <div className="resource-info">
-            <h3>{resource.title}</h3>
-            <div className="tags">
-              {resource.etiquetas.map((etiqueta, index) => (
-                <span key={index} className="tag">
-                  <i className="fas fa-tag"></i> {etiqueta}
-                </span>
+    <div className={`resource-card ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
+      <div className="resource-header">
+        <img
+          src={isExpanded ? resource.imagenGrande : resource.miniatura || "https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg"}
+          alt="Miniatura"
+          className={`resource-thumbnail ${isExpanded ? 'expanded-thumbnail' : ''}`}
+        />
+        <div>
+          <h3>{resource.titulo}</h3>
+          {!isExpanded && (
+            <div className="resource-tags">
+              {resource.etiquetas.map((tag, index) => (
+                <span key={index} className="tag">{tag}</span>
               ))}
             </div>
-          </div>
+          )}
         </div>
-      ) : (
-        <div className="expanded-content">
-          <img src={resource.imageFull} alt={resource.title} className="full-image" />
-          <h3>{resource.title}</h3>
-          <p>{resource.description}</p>
-          <a href={resource.link} className="resource-link">Ir al Recurso</a>
+      </div>
+      {isExpanded && (
+        <div className="resource-details">
+          <p>{resource.descripcion || "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ipsum ut sem sollicitudin."}</p>
+          <a href={resource.enlace} className="resource-link">Leer</a>
         </div>
       )}
     </div>

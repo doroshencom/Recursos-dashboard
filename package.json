@@ -1,6 +1,6 @@
 {
     "name": "recursos-app",
-    "homepage": "https://doroshencom/recursos-dashboard",
+    "homepage": "https://recursos-dorosken.netlify.app/",
     "version": "1.0.0",
     "private": true,
     "dependencies": {

@@ -1,0 +1,244 @@
+{
+  "Formación": [
+    {
+      "category": "Formación",
+      "titulo": "Scrimba",
+      "descripcion": "This course will teach you HTML and CSS through building and deploying five awesome projects.",
+      "etiquetas": ["JavaScript", "HTML", "Curso", "De pago"],
+      "miniatura": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfBvRrOd9llQ9uf5ExlkTDRCP4oeQ_CjqrPw&s",
+      "imagenGrande": "https://doroshen.com/resources/formacion-00-scrimba.png",
+      "enlace": "https://www.freecodecamp.org/espanol/learns"
+    },
+    {
+      "category": "Formación",
+      "titulo": "freeCodeCamp",
+      "descripcion": "La mejor preparación para mañana es hacer lo mejor que puedas hoy.",
+      "etiquetas": ["JavaScript", "Curso"],
+      "miniatura": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpCpzAlmrfzPB_q16Dbvq0IihxEcGEKTZFLA&s",
+      "imagenGrande": "https://doroshen.com/resources/formacion-00-codecamp.png",
+      "enlace": "https://www.freecodecamp.org/espanol/learns"
+    },
+    {
+      "category": "Formación",
+      "titulo": "JavaScript: Primeros pasos",
+      "descripcion": "Una guía para aprender los primeros pasos con JavaScript.",
+      "etiquetas": ["JavaScript", "Fundamentos"],
+      "miniatura": "https://es.javascript.info/img/site_preview_en_512x512.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-01-java.png",
+      "enlace": "https://es.javascript.info/first-steps"
+    },
+    {
+      "category": "Formación",
+      "titulo": "Code Guide: HTML Doctype",
+      "descripcion": "Guía de buenas prácticas en desarrollo web.",
+      "etiquetas": ["HTML", "Guía"],
+      "miniatura": "https://codeguide.co/code-guide-logo.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-02-HTML.png",
+      "enlace": "https://codeguide.co/#html-doctype"
+    },
+    {
+      "category": "Formación",
+      "titulo": "Libros HTML y CSS",
+      "descripcion": "Lista de libros gratuitos para aprender HTML y CSS.",
+      "etiquetas": ["CSS", "HTML", "Libros"],
+      "miniatura": "https://github.com/fluidicon.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-03-Libros.png",
+      "enlace": "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-es.md#html--css"
+    },
+    {
+      "category": "Formación",
+      "titulo": "All the Tags",
+      "descripcion": "Una colección de etiquetas HTML para SEO y accesibilidad.",
+      "etiquetas": ["HTML", "SEO", "Accesibilidad"],
+      "miniatura": "https://allthetags.com/favicon.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-04-TagsHTML.png",
+      "enlace": "https://allthetags.com/"
+    },
+    {
+      "category": "Formación",
+      "titulo": "CSS3 Cheatsheet",
+      "descripcion": "Un resumen práctico de las características de CSS3.",
+      "etiquetas": ["CSS", "Cheatsheet"],
+      "miniatura": "https://cdn.worldvectorlogo.com/logos/css-3.svg",
+      "imagenGrande": "https://doroshen.com/resources/formacion-05-CSS.png",
+      "enlace": "https://www.emezeta.com//weblog/css3-cheatsheet/css3-cheatsheet-2017-emezeta.pdf"
+    },
+    {
+      "category": "Formación",
+      "titulo": "HTML5 Cheatsheet",
+      "descripcion": "Resumen de HTML5 para desarrolladores.",
+      "etiquetas": ["HTML", "Cheatsheet"],
+      "miniatura": "https://www.angelvicen.com/wp-content/uploads/2020/04/html5-1024x1024.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-06-HTML.png",
+      "enlace": "https://www.emezeta.com//weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf"
+    },
+    {
+      "category": "Formación",
+      "titulo": "Include Media",
+      "descripcion": "Framework para manejar media queries en Sass.",
+      "etiquetas": ["CSS", "Sass", "Media Queries"],
+      "miniatura": "https://eduardoboucas.github.io/include-media/assets/images/favicon.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-07-Sass.png",
+      "enlace": "https://eduardoboucas.github.io/include-media/#features"
+    }
+  ],
+  "Recursos": [
+    {
+      "category": "Recursos",
+      "titulo": "28 Ebook y Curso Web Development",
+      "descripcion": "Una lista de ebooks y cursos gratuitos sobre desarrollo web.",
+      "etiquetas": ["CSS", "Libros"],
+      "miniatura": "https://media.dev.to/cdn-cgi/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-01-dev.png",
+      "enlace": "https://dev.to/haycuoilennao19/28-ebook-and-course-free-for-web-development-89o"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "Awesome Design Tools",
+      "descripcion": "Una lista de herramientas de diseño para desarrolladores.",
+      "etiquetas": ["CSS", "Diseño", "Herramientas"],
+      "miniatura": "https://github.com/fluidicon.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-02-dev.png",
+      "enlace": "https://github.com/goabstract/Awesome-Design-Tools#illustrations"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "100+ Underline Animations",
+      "descripcion": "Colección de animaciones CSS para subrayados.",
+      "etiquetas": ["CSS", "Animaciones"],
+      "miniatura": "https://media.dev.to/cdn-cgi/image/quality=100/https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-03-animations.png",
+      "enlace": "https://dev.to/afif/100-underline-overlay-animation-the-ultimate-css-collection-4p40"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "Badass Shadows",
+      "descripcion": "Cómo crear sombras impresionantes en CSS.",
+      "etiquetas": ["CSS", "Sombras", "Medium"],
+      "miniatura": "https://cdn.icon-icons.com/icons2/3042/PNG/512/medium_logo_icon_189268.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-04-animations.png",
+      "enlace": "https://blog.prototypr.io/how-to-make-badass-shadows-564b3a30aba4"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "Hover Animations Codepen",
+      "descripcion": "Una colección de animaciones de hover en CodePen.",
+      "etiquetas": ["CSS", "Animaciones", "Codepen"],
+      "miniatura": "https://blog.codepen.io/wp-content/uploads/2023/09/logo-white.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-05-animations.png",
+      "enlace": "https://codepen.io/torcode/pen/YXZJVQ"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "Component Encyclopedia",
+      "descripcion": "Reference thousands of components from leading UI engineering teams.",
+      "etiquetas": ["Componentes", "JavaScript"],
+      "miniatura": "https://pbs.twimg.com/profile_images/1100804485616566273/sOct-Txm_400x400.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-06-componentes.png",
+      "enlace": "https://storybook.js.org/showcase"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "Mobile and web design library",
+      "descripcion": "Save hours of UI & UX research with our library.",
+      "etiquetas": ["Diseño", "UX / UI", "Pantallas"],
+      "miniatura": "https://pbs.twimg.com/profile_images/1799365117509066752/KgIhRUJI_400x400.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-07-pantallas.png",
+      "enlace": "https://mobbin.com/browse/ios/apps"
+    },
+    {
+      "category": "Recursos",
+      "titulo": "User Flow Examples",
+      "descripcion": "Best Mobile and Web User Flow Examples From Proven Products.",
+      "etiquetas": ["Mobile", "UX / UI", "Pantallas"],
+      "miniatura": "https://pageflows.com/static/website/images/logo.png",
+      "imagenGrande": "https://doroshen.com/resources/recursos-08-pantallas.png",
+      "enlace": "https://pageflows.com/"
+    }
+
+  ],
+  "Herramientas": [
+    {
+      "category": "Herramientas",
+      "titulo": "JustCode Today Filters",
+      "descripcion": "Una herramienta para aplicar filtros CSS.",
+      "etiquetas": ["Herramientas", "Filtros"],
+      "miniatura": "https://avatars.githubusercontent.com/u/107036402?v=4",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-01-filtros.png",
+      "enlace": "https://justcode.today/filters/"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Shadows Generator",
+      "descripcion": "Una herramienta para generar sombras CSS personalizadas.",
+      "etiquetas": ["CSS", "Sombras"],
+      "miniatura": "https://static-00.iconduck.com/assets.00/react-icon-2048x2048-o8k3ymqa.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-02-sombras.png",
+
+      "enlace": "https://shadows.brumm.af/"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Neumorphism Generator",
+      "descripcion": "Generador de efectos neumórficos en CSS.",
+      "etiquetas": ["CSS", "Neumorfismo"],
+      "miniatura": "https://neumorphism.io/android-chrome-192x192.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-03-neumorphism.png",
+      "enlace": "https://neumorphism.io/#e0e0e0"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Coolors",
+      "descripcion": "Una herramienta para generar paletas de colores.",
+      "etiquetas": ["Diseño", "Colores"],
+      "miniatura": "https://play-lh.googleusercontent.com/f5V9vlssGd1D4J3INW63XPwiQKvp4deYwGm1daxqnuYoPhoODEJNUtihO9BWBOqaJic",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-04-colores.png",
+      "enlace": "https://coolors.co/d7dae5-b9cdda-a6d8d4-8eaf9d-6b7d7d"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Shape Divider",
+      "descripcion": "Una herramienta para generar separadores SVG.",
+      "etiquetas": ["SVG", "Diseño","Shape"],
+      "miniatura": "https://shapedivider.app/img/logo_500x500.18aca7aa.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-05-shape.png",
+      "enlace": "https://www.shapedivider.app/"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Make Tints and Shades",
+      "descripcion": "Generador de tintes y sombras para colores.",
+      "etiquetas": ["Colores", "Diseño", "Tints", "Shades"],
+      "miniatura": "https://maketintsandshades.com/apple-touch-icon.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-06-shades.png",
+      "enlace": "https://maketintsandshades.com/#007ee5"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Clockify",
+      "descripcion": "Aplicación de seguimiento del tiempo y parte de horas.",
+      "etiquetas": ["Tiempo", "Productividad"],
+      "miniatura": "https://cdn6.aptoide.com/imgs/c/4/2/c426401000f7a49ccc0557ef3f8c8243_icon.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-07-clockify.png",
+      "enlace": "https://clockify.me/"
+    },
+    {
+      "category": "Herramientas",
+      "titulo": "Notion",
+      "descripcion": "Una nueva herramienta que combina tus aplicaciones de trabajo diarias en una sola.",
+      "etiquetas": ["Gestión", "Productividad", "Agile"],
+      "miniatura": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-08-notion.png",
+      "enlace": "https://clockify.me/"
+    }, 
+    {
+      "category": "Herramientas",
+      "titulo": "iCal Event Maker",
+      "descripcion": "Generate ics file (iCalendar). Share with others.",
+      "etiquetas": ["Calendario", "ICS"],
+      "miniatura": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/768px-Google_Calendar_icon_%282020%29.svg.png",
+      "imagenGrande": "https://doroshen.com/resources/herramientas-09-ics.png",
+      "enlace": "https://ical.marudot.com/"
+    }    
+  ]
+}

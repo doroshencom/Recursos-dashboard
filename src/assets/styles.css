@@ -251,6 +251,139 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+/* Estilo para el formulario compacto en dos columnas */
+.add-resource-form {
+  background-color: #1e222717;
+  border: solid 1px #929faf17;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem; /* Espacio reducido debajo del formulario */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.add-resource-form h3 {
+  color: #b4b4b4;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-resource-form label {
+  color: #b4b4b4;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.add-resource-form input,
+.add-resource-form textarea,
+.add-resource-form select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 0.5rem; /* Reducido el margen entre los campos */
+  background-color: rgba(35, 39, 46, 0.3);
+  border: 1px solid #929faf17;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem; /* Tamaño de fuente reducido */
+}
+
+.add-resource-form button {
+  background-color: #E05545;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.add-resource-form button:hover {
+  background-color: #b83c2e;
+}
+
+/* Organiza el formulario en 2 columnas en pantallas grandes */
+.add-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Por defecto, 1 columna */
+  gap: 10px;
+}
+
+/* En pantallas grandes, organizamos el formulario en 2 columnas */
+@media (min-width: 768px) {
+  .add-resource-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas cuando sea posible */
+  }
+}
+
+/* Botón para abrir el modal */
+.open-modal-button {
+  background-color: #6cc832;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.open-modal-button:hover {
+  background-color: #9cee69;
+}
+
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1e222717;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #ccc;
+}
+
+/* El contenido del formulario en el modal */
+.add-resource-form {
+  background-color: transparent; /* Sin fondo para que encaje con el modal */
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+
 .search-bar {
   width: 100%;
   padding: 10px;

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Category from './components/Category';
 import FilterBar from './components/FilterBar';
+import AddResource from './components/AddResource'; // Importamos el componente AddResource
 import './assets/styles.css';  // Importar estilos
+import localResources from './recursos.json'; // Asegúrate de que esta ruta sea correcta
+import { collection, getDocs } from 'firebase/firestore'; // Importamos funciones de Firestore
+import { db } from './firebaseConfig'; // Configuración de Firebase
 
 function App() {
   const [recursos, setRecursos] = useState({});
@@ -9,6 +13,7 @@ function App() {
   const [activeFilters, setActiveFilters] = useState([]);
   const [allTags, setAllTags] = useState([]); // Nueva variable para las etiquetas
   const [activeResource, setActiveResource] = useState(null); // Estado para manejar el recurso activo
+  const [showModal, setShowModal] = useState(false); // Estado para manejar el modal
 
   // Función para extraer todas las etiquetas únicas
   const extractUniqueTags = (data) => {
@@ -21,23 +26,33 @@ function App() {
     return Array.from(tags);
   };
 
+  // Cargar recursos desde Firebase y el archivo JSON local
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/recursos.json`)  // Ruta correcta para acceder al archivo JSON
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Error al cargar los datos');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setRecursos(data);
-        setFilteredRecursos(data);
-        const uniqueTags = extractUniqueTags(data); // Extraer etiquetas únicas
+    const fetchFirebaseData = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "recursos"));
+        const firebaseResources = {};
+        querySnapshot.forEach((doc) => {
+          const resource = doc.data();
+          const category = resource.category || 'default'; // Asegúrate de definir la categoría
+          if (!firebaseResources[category]) {
+            firebaseResources[category] = [];
+          }
+          firebaseResources[category].push(resource);
+        });
+
+        // Combinamos los recursos locales con los de Firebase
+        const combinedResources = { ...localResources, ...firebaseResources };
+        setRecursos(combinedResources);
+        setFilteredRecursos(combinedResources);
+        const uniqueTags = extractUniqueTags(combinedResources);
         setAllTags(uniqueTags); // Guardar etiquetas en el estado
-      })
-      .catch((error) => {
-        console.error('Error al cargar recursos: ', error);
-      });
+      } catch (error) {
+        console.error('Error al cargar recursos desde Firebase: ', error);
+      }
+    };
+
+    fetchFirebaseData();
   }, []);
 
   const toggleFilter = (filter) => {
@@ -101,14 +116,30 @@ function App() {
         ))}
       </div>
 
+      {/* Botón para abrir el modal */}
+      <button className="open-modal-button" onClick={() => setShowModal(true)}>
+        Añadir Recurso
+      </button>
+
+      {/* Modal para el formulario */}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close-modal" onClick={() => setShowModal(false)}>
+              &times;
+            </span>
+            <AddResource /> {/* Formulario dentro del modal */}
+          </div>
+        </div>
+      )}
+
       {/* Footer añadido */}
       <footer>
         <p>
             Realizado por <a href="https://shenko.es" target="_blank" rel="noopener noreferrer">shenko.es</a> /  
             <a href="https://doroshen.com" target="_blank" rel="noopener noreferrer"> doroshen.com</a> en octubre de 2024.
         </p>
-    </footer>
-
+      </footer>
     </div>
   );
 }

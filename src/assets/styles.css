@@ -89,11 +89,12 @@ body::-webkit-scrollbar-thumb:hover {
 .resource-card {
   display: flex;
   border: 1px solid #383e49;
-  padding: 20px 12px;
+  padding: 20px 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
   background-color: #23272e4b;
   margin: 1rem 0;
+  gap: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,7 +107,7 @@ body::-webkit-scrollbar-thumb:hover {
   display: inline-block;
   background-color: #47505e4b;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.397);
-  padding: 20px;
+  padding: 20px 20px;
 }
 
 .resource-header {
@@ -117,10 +118,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 .resource-header h3 {
   padding: 0rem;
+  margin: auto;
 }
 
 .resource-img {
-  margin: auto 0.3rem;
+  margin: auto 0rem;
 }
 
 .resource-card h3 {
@@ -158,9 +160,11 @@ body::-webkit-scrollbar-thumb:hover {
   margin-top: 0px;
 }
 
+
 .resource-details p {
   margin: 0px;
-  color: #83868b;
+  color: #afafb1;
+  font-size: 16px;
 }
 
 .resource-link {
@@ -182,7 +186,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .resource-tags,
 .expanded-tags {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .resource-tags .tag,
@@ -192,7 +196,7 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 12px;
   padding: 5px 10px;
   margin-right: 5px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 /* Contenedor de los filtros */
@@ -202,7 +206,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-wrap: wrap; /* Permite que los filtros se ajusten a nuevas líneas */
   gap: 0rem; /* Espaciado entre los filtros */
   margin: 1rem auto; /* Espaciado arriba/abajo y auto para centrar */
-  max-width: 800px; /* Limita el ancho de la barra de filtros */
+  max-width: 1080px; /* Limita el ancho de la barra de filtros */
 }
 
 /* Estilo individual para los filtros */

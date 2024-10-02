@@ -21,7 +21,7 @@
       "descripcion": "Una guía para aprender los primeros pasos con JavaScript.",
       "etiquetas": ["JavaScript", "Fundamentos"],
       "miniatura": "https://es.javascript.info/img/site_preview_en_512x512.png",
-      "imagenGrande": "https://doroshen.com/resources/recursos-01-java.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-01-java.png",
       "enlace": "https://es.javascript.info/first-steps"
     },
     {
@@ -29,7 +29,7 @@
       "descripcion": "Guía de buenas prácticas en desarrollo web.",
       "etiquetas": ["HTML", "Guía"],
       "miniatura": "https://codeguide.co/code-guide-logo.png",
-      "imagenGrande": "https://doroshen.com/resources/recursos-02-html.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-02-HTML.png",
       "enlace": "https://codeguide.co/#html-doctype"
     },
     {
@@ -37,7 +37,7 @@
       "descripcion": "Lista de libros gratuitos para aprender HTML y CSS.",
       "etiquetas": ["CSS", "HTML", "Libros"],
       "miniatura": "https://github.com/fluidicon.png",
-      "imagenGrande": "https://doroshen.com/resources/recursos-03-libros.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-03-Libros.png",
       "enlace": "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-es.md#html--css"
     },
     {
@@ -45,7 +45,7 @@
       "descripcion": "Una colección de etiquetas HTML para SEO y accesibilidad.",
       "etiquetas": ["HTML", "SEO", "Accesibilidad"],
       "miniatura": "https://allthetags.com/favicon.png",
-      "imagenGrande": "https://doroshen.com/resources/recursos-04-tagshtml.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-04-TagsHTML.png",
       "enlace": "https://allthetags.com/"
     },
     {
@@ -53,7 +53,7 @@
       "descripcion": "Un resumen práctico de las características de CSS3.",
       "etiquetas": ["CSS", "Cheatsheet"],
       "miniatura": "https://cdn.worldvectorlogo.com/logos/css-3.svg",
-      "imagenGrande": "https://doroshen.com/resources/recursos-05-css.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-05-CSS.png",
       "enlace": "https://www.emezeta.com//weblog/css3-cheatsheet/css3-cheatsheet-2017-emezeta.pdf"
     },
     {
@@ -61,7 +61,7 @@
       "descripcion": "Resumen de HTML5 para desarrolladores.",
       "etiquetas": ["HTML", "Cheatsheet"],
       "miniatura": "https://www.angelvicen.com/wp-content/uploads/2020/04/html5-1024x1024.png",
-      "imagenGrande": "https://doroshen.com/resources/recursos-06-html.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-06-HTML.png",
       "enlace": "https://www.emezeta.com//weblog/html5-cheatsheet/html5-cheatsheet-2019.pdf"
     },
     {
@@ -69,7 +69,7 @@
       "descripcion": "Framework para manejar media queries en Sass.",
       "etiquetas": ["CSS", "Sass", "Media Queries"],
       "miniatura": "https://eduardoboucas.github.io/include-media/assets/images/favicon.png",
-      "imagenGrande": "https://doroshen.com/resources/recursos-07-sass.png",
+      "imagenGrande": "https://doroshen.com/resources/formacion-07-Sass.png",
       "enlace": "https://eduardoboucas.github.io/include-media/#features"
     }
   ],

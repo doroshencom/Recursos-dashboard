@@ -2,31 +2,31 @@ body {
   font-family: 'Arial', sans-serif;
   background: url('https://dsicom.es/assets/images/gradiente.png') no-repeat center center fixed;
   background-size: cover;
-  scrollbar-width: thin; /* Para Firefox */
-  scrollbar-color: #6cc832 rgba(255, 255, 255, 0.1); /* Color de la barra */
+  --sb-track-color: #242527;
+  --sb-thumb-color: #cfcfcf;
+  --sb-size: 4px;
 }
 
-/* Estilo de scrollbar para navegadores basados en WebKit */
 body::-webkit-scrollbar {
-  width: 8px;
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /* Fondo del track */
-  border-radius: 10px; /* Bordes redondeados */
+  background: var(--sb-track-color);
+  border-radius: 3px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #6cc832; /* Color de la barra de scroll */
-  border-radius: 10px; /* Bordes redondeados */
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Espacio alrededor de la barra */
-  transition: background-color 0.3s ease; /* Transición suave */
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background-color: #9cee69; /* Color al hacer hover en la barra */
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+      }
 }
-
 
 /* Contenedor del grid */
 .container {
@@ -261,4 +261,24 @@ body::-webkit-scrollbar-thumb:hover {
 .filter-list {
   display: flex;
   gap: 10px;
+}
+
+footer {
+  background-color: rgba(30, 34, 39, 0.1); /* Color de fondo similar al resto de la página */
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #b4b4b4; /* Color de texto gris claro acorde al diseño */
+  font-size: 0.9rem; /* Tamaño de fuente ligeramente más pequeño */
+  border-top: 1px solid rgba(146, 159, 175, 0.1); /* Línea superior suave */
+  margin-top: 2rem; /* Espacio superior */
+}
+
+footer a {
+  color: #6cc832; /* Enlaces en verde brillante */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #9cee69; /* Cambia el color del enlace al hacer hover */
 }

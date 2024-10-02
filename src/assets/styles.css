@@ -54,7 +54,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero {
   display: inline-block;
-  width: fill;
+  width: stretch;
   color: white;
   text-align: center;
 }
@@ -169,7 +169,7 @@ body::-webkit-scrollbar-thumb {
 
 .resource-link {
   display: block;
-  width: fill;
+  width: stretch;
   text-align: center;
   margin-top: 1.5rem;
   padding: 10px 20px;

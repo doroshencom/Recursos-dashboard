@@ -252,13 +252,60 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Estilo para el formulario compacto en dos columnas */
+
+/* Estilos del formulario más compacto */
 .add-resource-form {
-  background-color: #1e22270c;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas */
+  gap: 1rem 2rem;
+  padding: 0px;
+  background-color: #1e22270c; /* Fondo semitransparente */
   border-radius: 8px;
-  margin-bottom: 1rem; /* Espacio reducido debajo del formulario */
-  max-width: 100%;
-  margin: 0 auto;
+}
+
+.input-field, .submit-button { /* Unimos los estilos de los campos y el botón */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  height: 2rem; /* Altura consistente para todos los elementos */
+}
+
+.input-field {
+  grid-column: span 2; /* Ocupa ambas columnas por defecto */
+  border: 1px solid #ddd;
+  background-color: #242527;
+  color: #fff;
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 600px) {
+  .input-field {
+    grid-column: span 1; /* Ocupa una sola columna en pantallas más grandes */
+  }
+}
+
+.submit-button {
+  background-color: #e05545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 2.5rem;
+  justify-self: stretch;
+}
+
+.submit-button:hover {
+  background-color: #b83c2e;
+}
+
+/* Ajustes para el último campo y el botón en la misma fila */
+.input-field:nth-last-of-type(1) {
+  grid-column: span 1;
+}
+
+.submit-button {
+  grid-column: span 1; /* Alinea el botón con el último input */
 }
 
 .add-resource-form h3 {
@@ -338,8 +385,8 @@ body::-webkit-scrollbar-thumb {
 /* Estilos para el modal */
 /* Efecto de desenfoque */
 .blur-background {
-  filter: blur(5px);
-  transition: filter 0.3s ease; /* Transición suave al desenfoque */
+  filter: blur(10px);
+  transition: filter 0.5s ease; /* Transición suave al desenfoque */
 }
 
 /* Estilo del modal */
@@ -358,7 +405,7 @@ body::-webkit-scrollbar-thumb {
 
 .modal-content {
   background-color: #24252771;
-  padding: 0px;
+  padding: 10px;
   border-radius: 8px;
   width: 80%;
   max-width: 500px;
@@ -371,6 +418,7 @@ body::-webkit-scrollbar-thumb {
   right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #f14734;
 }
 
 /* Evita que el modal tenga desenfoque */

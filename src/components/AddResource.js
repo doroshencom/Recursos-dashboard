@@ -1,66 +1,87 @@
 import React, { useState } from 'react';
-import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../firebaseConfig';
 
-function AddResource({ selectedCategory }) {
-  const [resource, setResource] = useState({
-    category: selectedCategory, // Establecer la categoría seleccionada
-    titulo: '',
-    descripcion: '',
-    etiquetas: '',
-    miniatura: '',
-    imagenGrande: '',
-    enlace: ''
-  });
+function AddResource({ selectedCategory, onSubmit }) {
+  const [titulo, setTitulo] = useState('');
+  const [descripcion, setDescripcion] = useState('');
+  const [etiquetas, setEtiquetas] = useState('');
+  const [miniatura, setMiniatura] = useState('');
+  const [imagenGrande, setImagenGrande] = useState('');
+  const [enlace, setEnlace] = useState('');
 
-  const handleChange = (e) => {
-    setResource({ ...resource, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await addDoc(collection(db, 'recursos'), {
-        ...resource,
-        etiquetas: resource.etiquetas.split(',').map((tag) => tag.trim())
-      });
-      alert('Recurso añadido correctamente');
-    } catch (error) {
-      console.error('Error al agregar el recurso: ', error);
-    }
+    const newResource = {
+      category: selectedCategory, // Añade la categoría seleccionada automáticamente
+      titulo,
+      descripcion,
+      etiquetas: etiquetas.split(',').map((tag) => tag.trim()), // Convierte la lista de etiquetas a un array
+      miniatura,
+      imagenGrande,
+      enlace,
+    };
+    onSubmit(newResource); // Enviar el recurso al padre (App.js)
   };
 
   return (
-    <form className="add-resource-form" onSubmit={handleSubmit}>
-      {/* Selector de categoría */}
-      <label>Categoría</label>
+    <form onSubmit={handleSubmit} className="add-resource-form">
+      {/* Selector de categoría ya seleccionado */}
       <input
         type="text"
-        name="category"
-        value={resource.category}
-        onChange={handleChange}
+        value={selectedCategory}
         disabled
+        className="input-field"
+        placeholder="Categoría"
       />
 
-      <label>Título</label>
-      <input type="text" name="titulo" value={resource.titulo} onChange={handleChange} required />
+      <input
+        type="text"
+        value={titulo}
+        onChange={(e) => setTitulo(e.target.value)}
+        placeholder="Título del recurso"
+        className="input-field"
+      />
 
-      <label>Descripción</label>
-      <textarea name="descripcion" value={resource.descripcion} onChange={handleChange} required />
+      <input
+        type="text"
+        value={descripcion}
+        onChange={(e) => setDescripcion(e.target.value)}
+        placeholder="Descripción"
+        className="input-field"
+      />
 
-      <label>Etiquetas (separadas por comas)</label>
-      <input type="text" name="etiquetas" value={resource.etiquetas} onChange={handleChange} required />
+      <input
+        type="text"
+        value={etiquetas}
+        onChange={(e) => setEtiquetas(e.target.value)}
+        placeholder="Etiquetas (separadas por comas)"
+        className="input-field"
+      />
 
-      <label>URL de la miniatura</label>
-      <input type="url" name="miniatura" value={resource.miniatura} onChange={handleChange} />
+      <input
+        type="text"
+        value={miniatura}
+        onChange={(e) => setMiniatura(e.target.value)}
+        placeholder="URL de la miniatura"
+        className="input-field"
+      />
 
-      <label>URL de la imagen grande</label>
-      <input type="url" name="imagenGrande" value={resource.imagenGrande} onChange={handleChange} />
+      <input
+        type="text"
+        value={imagenGrande}
+        onChange={(e) => setImagenGrande(e.target.value)}
+        placeholder="URL de la imagen grande"
+        className="input-field"
+      />
 
-      <label>Enlace</label>
-      <input type="url" name="enlace" value={resource.enlace} onChange={handleChange} required />
+      <input
+        type="text"
+        value={enlace}
+        onChange={(e) => setEnlace(e.target.value)}
+        placeholder="Enlace al recurso"
+        className="input-field"
+      />
 
-      <button type="submit">Añadir Recurso</button>
+      <button type="submit" className="submit-button">Añadir Recurso</button>
     </form>
   );
 }

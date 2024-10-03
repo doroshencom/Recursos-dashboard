@@ -253,11 +253,9 @@ body::-webkit-scrollbar-thumb {
 
 /* Estilo para el formulario compacto en dos columnas */
 .add-resource-form {
-  background-color: #1e222717;
-  border: solid 1px #929faf17;
+  background-color: #1e22270c;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem; /* Espacio reducido debajo del formulario */
   max-width: 100%;
   margin: 0 auto;
@@ -322,7 +320,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Botón para abrir el modal */
 .open-modal-button {
-  background-color: #6cc832;
+  background-color: #b83c2e;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -334,7 +332,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .open-modal-button:hover {
-  background-color: #9cee69;
+  background-color: #b83c2e;
 }
 
 /* Estilos para el modal */
@@ -359,8 +357,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal-content {
-  background-color: white;
-  padding: 20px;
+  background-color: #24252771;
+  padding: 0px;
   border-radius: 8px;
   width: 80%;
   max-width: 500px;
@@ -395,7 +393,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Botón + para añadir recurso en cada categoría */
 .add-resource-button {
-  background-color: #6cc832;
+  background-color: #b83c2e;
   color: white;
   font-size: 1.5rem;
   border: none;
@@ -411,7 +409,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .add-resource-button:hover {
-  background-color: #9cee69;
+  background-color: #eb5848;
 }
 
 .category-header {
@@ -451,5 +449,5 @@ footer a {
 }
 
 footer a:hover {
-  color: #9cee69; /* Cambia el color del enlace al hacer hover */
+  color: #b83c2e; /* Cambia el color del enlace al hacer hover */
 }

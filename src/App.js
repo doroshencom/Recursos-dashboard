@@ -14,6 +14,7 @@ function App() {
   const [allTags, setAllTags] = useState([]); // Nueva variable para las etiquetas
   const [activeResource, setActiveResource] = useState(null); // Estado para manejar el recurso activo
   const [showModal, setShowModal] = useState(false); // Estado para manejar el modal
+  const [selectedCategory, setSelectedCategory] = useState(''); // Estado para la categoría seleccionada
 
   // Función para extraer todas las etiquetas únicas
   const extractUniqueTags = (data) => {
@@ -88,38 +89,49 @@ function App() {
     }
   };
 
-  return (
-    <div className="App">
-      <header className="hero">
-        <div className="hero-content">
-          <h1 className='hero-title'>
-            {/* Usamos una imagen como título */}
-            <img 
-              src="https://doroshen.com/favicon.ico" 
-              alt="Logo" 
-              style={{ width: '50px', height: '50px' }} 
-            />
-          </h1>
-          <p className='hero-content'>Descubre los mejores recursos en categorías como CSS, JavaScript, Figma, y más.</p>
-        </div>
-      </header>
-      <FilterBar filters={allTags} activeFilters={activeFilters} toggleFilter={toggleFilter} clearFilters={clearFilters} />
-      <div className="container grid-3-columns">
-        {Object.keys(filteredRecursos).map((category) => (
-          <Category
-            key={category}
-            title={category}
-            resources={filteredRecursos[category]}
-            activeResource={activeResource}
-            onResourceClick={handleResourceClick} // Pasamos la función que gestiona el recurso activo
-          />
-        ))}
-      </div>
+  // Maneja la apertura del modal y establece la categoría seleccionada
+  const handleAddResourceClick = (category) => {
+    setSelectedCategory(category);
+    setShowModal(true);
+  };
 
-      {/* Botón para abrir el modal */}
-      <button className="open-modal-button" onClick={() => setShowModal(true)}>
-        Añadir Recurso
-      </button>
+  return (
+    <>
+      <div className={`content ${showModal ? 'blur-background' : ''}`}> {/* Contenedor que se desenfoca */}
+        <header className="hero">
+          <div className="hero-content">
+            <h1 className='hero-title'>
+              {/* Usamos una imagen como título */}
+              <img 
+                src="https://doroshen.com/favicon.ico" 
+                alt="Logo" 
+                style={{ width: '50px', height: '50px' }} 
+              />
+            </h1>
+            <p className='hero-content'>Descubre los mejores recursos en categorías como CSS, JavaScript, Figma, y más.</p>
+          </div>
+        </header>
+        <FilterBar filters={allTags} activeFilters={activeFilters} toggleFilter={toggleFilter} clearFilters={clearFilters} />
+        <div className="container grid-3-columns">
+          {Object.keys(filteredRecursos).map((category) => (
+            <Category
+              key={category}
+              title={category}
+              resources={filteredRecursos[category]}
+              activeResource={activeResource}
+              onResourceClick={handleResourceClick}
+              onAddResourceClick={handleAddResourceClick} // Pasamos la función para abrir el modal con la categoría seleccionada
+            />
+          ))}
+        </div>
+        {/* Footer añadido */}
+        <footer>
+          <p>
+              Realizado por <a href="https://shenko.es" target="_blank" rel="noopener noreferrer">shenko.es</a> /  
+              <a href="https://doroshen.com" target="_blank" rel="noopener noreferrer"> doroshen.com</a> en octubre de 2024.
+          </p>
+        </footer>
+      </div>
 
       {/* Modal para el formulario */}
       {showModal && (
@@ -128,19 +140,11 @@ function App() {
             <span className="close-modal" onClick={() => setShowModal(false)}>
               &times;
             </span>
-            <AddResource /> {/* Formulario dentro del modal */}
+            <AddResource selectedCategory={selectedCategory} /> {/* Formulario dentro del modal con la categoría seleccionada */}
           </div>
         </div>
       )}
-
-      {/* Footer añadido */}
-      <footer>
-        <p>
-            Realizado por <a href="https://shenko.es" target="_blank" rel="noopener noreferrer">shenko.es</a> /  
-            <a href="https://doroshen.com" target="_blank" rel="noopener noreferrer"> doroshen.com</a> en octubre de 2024.
-        </p>
-      </footer>
-    </div>
+    </>
   );
 }
 

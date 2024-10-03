@@ -338,26 +338,32 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Estilos para el modal */
+/* Efecto de desenfoque */
+.blur-background {
+  filter: blur(5px);
+  transition: filter 0.3s ease; /* Transición suave al desenfoque */
+}
+
+/* Estilo del modal */
 .modal {
   position: fixed;
-  z-index: 1000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999; /* Asegurarse de que esté por encima del contenido */
 }
 
 .modal-content {
-  background-color: #1e222717;
+  background-color: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  width: 90%;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
   position: relative;
 }
 
@@ -365,11 +371,15 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 24px;
-  color: #fff;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
+
+/* Evita que el modal tenga desenfoque */
+.modal-content {
+  filter: none;
+}
+
 
 .close-modal:hover {
   color: #ccc;
@@ -378,10 +388,38 @@ body::-webkit-scrollbar-thumb {
 /* El contenido del formulario en el modal */
 .add-resource-form {
   background-color: transparent; /* Sin fondo para que encaje con el modal */
-  padding: 0;
+  padding: 1rem;
   max-width: 100%;
-  margin: 0;
+  margin: 1rem;
 }
+
+/* Botón + para añadir recurso en cada categoría */
+.add-resource-button {
+  background-color: #6cc832;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-resource-button:hover {
+  background-color: #9cee69;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 
 .search-bar {

@@ -1,145 +1,65 @@
 import React, { useState } from 'react';
-import { db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
-function AddResource() {
-  const [resourceData, setResourceData] = useState({
-    category: '',
+function AddResource({ selectedCategory }) {
+  const [resource, setResource] = useState({
+    category: selectedCategory, // Establecer la categoría seleccionada
     titulo: '',
     descripcion: '',
     etiquetas: '',
     miniatura: '',
     imagenGrande: '',
-    enlace: '',
+    enlace: ''
   });
 
   const handleChange = (e) => {
-    setResourceData({
-      ...resourceData,
-      [e.target.name]: e.target.value,
-    });
+    setResource({ ...resource, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await addDoc(collection(db, 'recursos'), {
-        ...resourceData,
-        etiquetas: resourceData.etiquetas.split(',').map((tag) => tag.trim()), // Convertimos etiquetas en array
+        ...resource,
+        etiquetas: resource.etiquetas.split(',').map((tag) => tag.trim())
       });
-      setResourceData({
-        category: '',
-        titulo: '',
-        descripcion: '',
-        etiquetas: '',
-        miniatura: '',
-        imagenGrande: '',
-        enlace: '',
-      });
-      alert('Recurso añadido con éxito.');
+      alert('Recurso añadido correctamente');
     } catch (error) {
-      console.error('Error al agregar el documento: ', error);
+      console.error('Error al agregar el recurso: ', error);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="add-resource-form">
-      <h3>Añadir Nuevo Recurso</h3>
-      <div className="add-resource-grid">
-        {/* Selector de categoría */}
-        <div>
-          <label htmlFor="category">Categoría</label>
-          <select
-            id="category"
-            name="category"
-            value={resourceData.category}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Selecciona una categoría</option>
-            <option value="Formación">Formación</option>
-            <option value="Recursos">Recursos</option>
-            <option value="Herramientas">Herramientas</option>
-          </select>
-        </div>
+    <form className="add-resource-form" onSubmit={handleSubmit}>
+      {/* Selector de categoría */}
+      <label>Categoría</label>
+      <input
+        type="text"
+        name="category"
+        value={resource.category}
+        onChange={handleChange}
+        disabled
+      />
 
-        {/* Título */}
-        <div>
-          <label htmlFor="titulo">Título</label>
-          <input
-            type="text"
-            id="titulo"
-            name="titulo"
-            value={resourceData.titulo}
-            onChange={handleChange}
-            required
-          />
-        </div>
+      <label>Título</label>
+      <input type="text" name="titulo" value={resource.titulo} onChange={handleChange} required />
 
-        {/* Descripción */}
-        <div>
-          <label htmlFor="descripcion">Descripción</label>
-          <textarea
-            id="descripcion"
-            name="descripcion"
-            value={resourceData.descripcion}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
+      <label>Descripción</label>
+      <textarea name="descripcion" value={resource.descripcion} onChange={handleChange} required />
 
-        {/* Etiquetas */}
-        <div>
-          <label htmlFor="etiquetas">Etiquetas (separadas por comas)</label>
-          <input
-            type="text"
-            id="etiquetas"
-            name="etiquetas"
-            value={resourceData.etiquetas}
-            onChange={handleChange}
-            required
-          />
-        </div>
+      <label>Etiquetas (separadas por comas)</label>
+      <input type="text" name="etiquetas" value={resource.etiquetas} onChange={handleChange} required />
 
-        {/* Miniatura */}
-        <div>
-          <label htmlFor="miniatura">URL de la Miniatura</label>
-          <input
-            type="text"
-            id="miniatura"
-            name="miniatura"
-            value={resourceData.miniatura}
-            onChange={handleChange}
-          />
-        </div>
+      <label>URL de la miniatura</label>
+      <input type="url" name="miniatura" value={resource.miniatura} onChange={handleChange} />
 
-        {/* Imagen Grande */}
-        <div>
-          <label htmlFor="imagenGrande">URL de la Imagen Grande</label>
-          <input
-            type="text"
-            id="imagenGrande"
-            name="imagenGrande"
-            value={resourceData.imagenGrande}
-            onChange={handleChange}
-          />
-        </div>
+      <label>URL de la imagen grande</label>
+      <input type="url" name="imagenGrande" value={resource.imagenGrande} onChange={handleChange} />
 
-        {/* Enlace */}
-        <div>
-          <label htmlFor="enlace">Enlace al recurso</label>
-          <input
-            type="text"
-            id="enlace"
-            name="enlace"
-            value={resourceData.enlace}
-            onChange={handleChange}
-            required
-          />
-        </div>
-      </div>
+      <label>Enlace</label>
+      <input type="url" name="enlace" value={resource.enlace} onChange={handleChange} required />
 
-      {/* Botón para enviar */}
       <button type="submit">Añadir Recurso</button>
     </form>
   );
